@@ -1,15 +1,10 @@
-# BunianCTF 1st challenge
+# BunianCTF
 
-## Description
+This repo contains a series of jeopardy-style CTF challenges shared on a weekly basis
+on Bunian's [discord server]()
 
-Can you log in?
+> Challenges are named `challenge-<number>[_COMPLETE]`
 
-## How to run the code
-
-```bash
-# clone the repo and cd into challenge-1/
-npm install
-node index.js
-```
-
-You can interact with the server at `http://localhost:3000`
+> [!TIP]
+> _COMPLETE is appended to the challenge name if and only if it's inactive. Feel free to check README.md of each challenge
+> for challenge writeups
