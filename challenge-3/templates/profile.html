@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Profile Bio</h2>
+  <p>Here you can preview your profile bio.</p>
+  <form method="post">
+    <label>Custom template (dangerous!):</label>
+    <textarea name="template" rows="4" placeholder="e.g., Hello {{ username }}"></textarea>
+    <input type="submit" value="Preview">
+  </form>
+
+  {% if rendered %}
+    <h3>Preview:</h3>
+    <div class="preview-box">{{ rendered|safe }}</div>
+  {% endif %}
+{% endblock %}
+

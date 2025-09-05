@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3rd Chall</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav>
+    {% if session.get("username") %}
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('profile_page') }}">Profile Settings</a>
+      <a href="{{ url_for('flag_page') }}">FLAG!</a>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="{{ url_for('register') }}">Register</a>
+    {% endif %}
+  </nav>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+  <footer>
+    <p>Inspired by TBATE Fandom Wiki | CTF Challenge</p>
+  </footer>
+</body>
+</html>
+

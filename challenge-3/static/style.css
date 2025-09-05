@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Cinzel", "Times New Roman", serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.6;
+}
+
+/* Header + Navigation fixed to top */
+header {
+  background-color: #161b22;
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid #30363d;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #ff5555; /* red accent for title */
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px #580000;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #161b22;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #30363d;
+  z-index: 1000;
+}
+
+nav a {
+  color: #58a6ff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Cinzel", serif;
+}
+
+nav a:hover {
+  color: #ff5555; /* red on hover */
+}
+
+.container {
+  max-width: 800px;
+  margin: 80px auto 30px auto; /* add top margin because navbar is fixed */
+  padding: 20px;
+  background: #161b22;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  color: #58a6ff;
+  font-family: "Cinzel", serif;
+}
+
+button, input[type="submit"] {
+  background-color: #58a6ff;
+  color: #0d1117;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #ff5555; /* red hover effect */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #30363d;
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
