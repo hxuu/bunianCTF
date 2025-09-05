@@ -16,3 +16,7 @@ docker run -d -p 5000:5000 bunian:jail
 > You can interact with the challenge using `nc localhost 5000`
 
 Do share your screenshot of the solve ;)
+
+---
+
+Solution found [here](https://www.youtube.com/watch?v=f8tD8QG347g)
