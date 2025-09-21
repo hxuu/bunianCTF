@@ -16,3 +16,7 @@ docker run -d -p 5000:5000 bunian3
 > You can interact with the challenge on `http://localhost:5000`
 
 Do share your screenshot of the solve ;)
+
+---
+
+Video writeup link [here](https://youtu.be/C5B_gA0bqXY)
