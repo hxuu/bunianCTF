@@ -3,7 +3,6 @@ const http = require("http");
 const url = require("url");
 const fs = require("fs");
 const path = require("path");
-const { exec } = require('child_process');
 
 const PORT = 8080;
 
@@ -18,6 +17,13 @@ const server = http.createServer((req, res) => {
     const filePath = path.resolve(fileParam);
     try {
         const stats = fs.statSync(filePath);
+
+        // Can't allow unintended solutions~
+        if (!stats.isFile() || stats.size === 0) {
+            res.writeHead(403, { "Content-Type": "text/plain" });
+            return res.end("Nope :)");
+        }
+
         res.writeHead(200, {"Content-Type":"application/octet-stream", "Content-Length": stats.size});
         fs.createReadStream(filePath).pipe(res);
     } catch (err) {
