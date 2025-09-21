@@ -7,16 +7,15 @@ Can you read the flag from the webserver?
 ### How to run the code
 
 ```bash
-# make sure you're inside this directory
-docker build -t chall4 .
-docker run -d --name chall4 -p 8080:8080 chall4:latest
-docker exec -it -u ctfuser chall4 /bin/sh
+cd new/
+chmod +x build-docker.sh
+./build-docker.sh # always read scripts before you run :)
 ```
 
 > [!TIP]
-> You can interact with the challenge on `http://localhost:8080`
+> You will automatically ssh into the challenge
 
-Solutions by just catting out /proc/<pid>/environ don't count :)
+Solutions by just catting out `/proc/<pid>/environ` doesn't work now hehe~
 
 ---
 
