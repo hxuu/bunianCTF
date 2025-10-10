@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# docker stop $(docker ps -q)
-# ssh-keygen -R "[localhost]:2222"
+docker stop $(docker ps -q)
+ssh-keygen -R "[localhost]:2222"
 
 docker build -t chall4 .
 docker run -d --rm -p 2222:22 --name chall4 chall4

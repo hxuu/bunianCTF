@@ -16,6 +16,7 @@ const server = http.createServer((req, res) => {
 
     const filePath = path.resolve(fileParam);
     try {
+        // time passed here..... (2ms)
         const stats = fs.statSync(filePath);
 
         // Can't allow unintended solutions~

@@ -19,5 +19,4 @@ Solutions by just catting out `/proc/<pid>/environ` doesn't work now hehe~
 
 ---
 
-Do share your screenshot of the solve ;)
-
+Solution [here](https://www.youtube.com/watch?v=-5qVkHPxqOg&t=44s&pp=ygUYYWxnZXJpYW4gdGVjaCBtYWtlcnMgY3Rm)
