@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <article class="post" style="margin-top: 70px;">
+    <h1>{{ post['title'] }}</h1>
+    <p class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</p>
+    <div class="body">{{ post['body'] }}</div>
+
+    {% if g.user and g.user['id'] == post['author_id'] %}
+      <hr>
+      <a href="{{ url_for('blog.update', id=post['id']) }}" class="cta-post" style="background-color: orange; color: black">Edit</a>
+    {% endif %}
+
+    <hr>
+    <a href="{{ url_for('blog.index') }}" class="cta-post">← Back to Posts</a>
+  </article>
+{% endblock %}
+

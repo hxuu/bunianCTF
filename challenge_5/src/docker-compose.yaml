@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  liendans:
+    build: .
+    container_name: liendans
+    image: bunian/chall5
+    ports:
+      - "80:8000"
+    restart: unless-stopped
+

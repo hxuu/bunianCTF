@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="landing">
+<h1>{% block title %}POSTS{% endblock %}</h1>
+  {% if g.user %}
+    <a class="cta-post" href="{{ url_for('blog.create') }}">New</a>
+  {% endif %}
+</div>
+{% if posts|default([]) %}
+  {% for post in posts %}
+    <article class="post">
+      <header>
+        <div class="author">
+          <h1>{{ post['title'] }}</h1>
+          <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+        </div>
+        {% if g.user['id'] == post['author_id'] %}
+          <a class="cta-post" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
+        {% endif %}
+      </header>
+      <p class="body">
+  {{ post['body'][:200] }}
+  {% if post['body']|length > 200 %}
+  {% endif %}
+	<a href="{{ url_for('blog.detail', id=post['id']) }}" class="cta-post">Read more...</a>
+      </p>
+    </article>
+    {% if not loop.last %}
+      <hr style="width: 60%;">
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <div class="no-posts">No posts yet. Be the first to create one!</div>
+{% endif %}
+{% endblock %}
